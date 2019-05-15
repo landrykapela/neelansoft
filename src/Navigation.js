@@ -30,7 +30,7 @@ class Navigation extends React.Component{
 
   render(){
     const mylinks = this.state.links.map((link)=>{
-      return (<li><a href={link.target} className={link.active ? "active" : ""} id={link.id} onClick={this.handleClick}>{link.text}</a></li>)
+      return (<li key={link.id}><a href={link.target} className={link.active ? "active" : ""} id={link.id} onClick={this.handleClick}>{link.text}</a></li>)
     });
 
     return(
