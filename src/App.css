@@ -1,11 +1,20 @@
 .App {
   text-align: center;
 }
+.no-scroll{
+  overflow: hidden;
+}
+.error{
+  background-color: #ff867c;
+}
 .text-primary{
   color: #00838f
 }
 .text-secondary{
   color: #ffb300;
+}
+.hidden{
+  display: none;
 }
 .primary{
   background-color: #00838f
@@ -113,7 +122,50 @@
   color: white;
   width: 30%;
 }
-
+.contact-form{
+  color: teal;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 25vh;
+  z-index: 1000;
+  width: 30%;
+  height:auto;
+  background-image: url('form-bg.png');
+  background-size: cover;
+  padding: 0.5em 1em;
+}
+.contact-form input[type=email], .contact-form input[type=text]{
+  border: 1px solid teal;
+  height: 2.5em;
+}
+.contact-form input[type=submit]{
+  height: 2.5em;
+  font-family: 'raleway',sans-serif;
+  color: white;
+  text-transform: uppercase;
+  width: 30%;
+  cursor: pointer;
+  margin-bottom: 3em;
+}
+.contact-form textarea{
+  height: 15em;
+}
+.contact-form .form-input{
+  margin-top: 1em;
+  padding: .3em 1em;
+  font-size: .5em;
+  width: 90%;
+}
+.contact-form .control{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+.contact-form .control span{
+  cursor: pointer;
+}
 .App-section {
   background-color: white;
   min-height: 100vh;
