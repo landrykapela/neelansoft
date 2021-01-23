@@ -1,0 +1,146 @@
+@media only screen and (max-width: 768px) {
+  $primaryColor: teal;
+  $accentColor: #f3ac1e;
+  $defaultBg: #ffffff;
+  $defaultText: #000000;
+  $fontFamily: "Poppins", sans-serif;
+  $largeFont: large;
+  $smallFont: small;
+  $mediumFont: medium;
+  $maxWidth: 768px;
+  $paddingSmall: 0.25em;
+  $paddingMedium: 0.5em;
+  $paddingLarge: 1em;
+  $paddingXtra: 2em;
+
+  @mixin flex($dir, $jc, $ai, $wrap) {
+    display: flex;
+    flex-direction: $dir;
+    align-items: $ai;
+    justify-content: $jc;
+    @if $wrap == 1 {
+      max-width: $maxWidth;
+      flex-wrap: wrap;
+    }
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: $defaultBg;
+    color: $defaultText;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: $mediumFont;
+    // background-color: $accentColor;
+  }
+  header {
+    background-color: $primaryColor;
+    padding: $paddingMedium $paddingLarge;
+    width: calc(100% - (2 * $paddingLarge));
+    margin: 0 auto;
+  }
+  .top_bar {
+    @include flex(row, space-between, center, 0);
+    margin: $paddingMedium 0;
+  }
+  .logo {
+    width: 50px;
+  }
+
+  #cname {
+    display: none;
+  }
+  .top-nav {
+    @include flex(column, flex-start, flex-start, 0);
+    background-color: $primaryColor;
+    color: $defaultBg;
+    padding: $paddingMedium 0;
+    width: 100%;
+  }
+  .top-nav > span {
+    padding: $paddingSmall $paddingMedium;
+    width: calc(100% - (2 * #{paddingMedium}));
+  }
+  .top-nav > span.active {
+    background-color: $accentColor;
+    color: $defaultText;
+    width: calc(100% - (2 * #{$paddingMedium}));
+  }
+  #menu {
+    color: $defaultBg;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  .title,
+  .subtitle {
+    font-family: $fontFamily;
+    font-weight: 300;
+  }
+  .subtitle {
+    font-size: $mediumFont;
+  }
+  .title {
+    font-size: $largeFont;
+  }
+  .description {
+    font-family: $fontFamily;
+  }
+  section {
+    text-align: center;
+    padding: $paddingLarge;
+  }
+  section .container {
+    @include flex(row, center, center, 0);
+  }
+  .feature-image {
+    width: 80%;
+  }
+  .hidden {
+    display: none;
+  }
+  .can_slideinbottom {
+    animation: slideInBottom 0.3s linear 0s 1 forwards;
+  }
+  .can_slideinleft {
+    animation: slideInLeft 0.3s linear 0s 1 forwards;
+  }
+
+  .can_slideinright {
+    animation: slideInRight 0.3s linear 0s 1 forwards;
+  }
+
+  @keyframes slideInBottom {
+    from {
+      margin-bottom: -200px;
+      display: none;
+    }
+    to {
+      margin-bottom: unset;
+      display: unset;
+    }
+  }
+  @keyframes slideInLeft {
+    from {
+      margin-left: -200px;
+      display: none;
+    }
+    to {
+      margin-left: unset;
+      display: unset;
+    }
+  }
+  @keyframes slideInRight {
+    from {
+      margin-right: -200px;
+      display: none;
+    }
+    to {
+      margin-right: unset;
+      display: unset;
+    }
+  }
+}

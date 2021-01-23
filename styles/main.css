@@ -1,0 +1,150 @@
+@media only screen and (max-width: 768px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: medium;
+  }
+
+  header {
+    background-color: teal;
+    padding: 0.5em 1em;
+    width: calc(100% - (2 * $paddingLarge));
+    margin: 0 auto;
+  }
+
+  .top_bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.5em 0;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  #cname {
+    display: none;
+  }
+
+  .top-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: teal;
+    color: #ffffff;
+    padding: 0.5em 0;
+    width: 100%;
+  }
+
+  .top-nav > span {
+    padding: 0.25em 0.5em;
+    width: calc(100% - (2 * paddingMedium));
+  }
+
+  .top-nav > span.active {
+    background-color: #f3ac1e;
+    color: #000000;
+    width: calc(100% - (2 * 0.5em));
+  }
+
+  #menu {
+    color: #ffffff;
+  }
+
+  h1,
+h2,
+h3,
+h4,
+.title,
+.subtitle {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+  }
+
+  .subtitle {
+    font-size: medium;
+  }
+
+  .title {
+    font-size: large;
+  }
+
+  .description {
+    font-family: "Poppins", sans-serif;
+  }
+
+  section {
+    text-align: center;
+    padding: 1em;
+  }
+
+  section .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .feature-image {
+    width: 80%;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .can_slideinbottom {
+    animation: slideInBottom 0.3s linear 0s 1 forwards;
+  }
+
+  .can_slideinleft {
+    animation: slideInLeft 0.3s linear 0s 1 forwards;
+  }
+
+  .can_slideinright {
+    animation: slideInRight 0.3s linear 0s 1 forwards;
+  }
+
+  @keyframes slideInBottom {
+    from {
+      margin-bottom: -200px;
+      display: none;
+    }
+    to {
+      margin-bottom: unset;
+      display: unset;
+    }
+  }
+  @keyframes slideInLeft {
+    from {
+      margin-left: -200px;
+      display: none;
+    }
+    to {
+      margin-left: unset;
+      display: unset;
+    }
+  }
+  @keyframes slideInRight {
+    from {
+      margin-right: -200px;
+      display: none;
+    }
+    to {
+      margin-right: unset;
+      display: unset;
+    }
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
